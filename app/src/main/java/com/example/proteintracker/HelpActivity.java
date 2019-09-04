@@ -17,9 +17,18 @@ public class HelpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        TextView myTextView = new TextView(this);
+        setContentView(R.layout.activity_help);
+
+        TextView txtView = findViewById(R.id.textView1);
+        txtView.setText("Welcome");
+
+        Bundle b = getIntent().getExtras();
+        String tmpString = b.getString("helpString");
+
+        txtView.setText(tmpString);
+
+        /*TextView myTextView = new TextView (this);
         myTextView.setText("Some Help Text");
-        setContentView(myTextView);
 
         if (savedInstanceState != null) {
             Log.d("ProteinTracker", savedInstanceState.getString("abc"));
@@ -28,5 +37,6 @@ public class HelpActivity extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         String helpText = b.getString("helpString");
         myTextView.setText(helpText);
+        */
     }
 }

@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.mainActivityTextView);
         textView.setText(R.string.test_untuk_update_view);
 
+        Button layoutBtn = (Button) findViewById(R.id.LayoutButton);
+        layoutBtn.setOnClickListener(layoutButtonListener);
+
 
         Button helpBtn = (Button)findViewById(R.id.helpButton);
         helpBtn.setOnClickListener(helpButtonListener);
@@ -54,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
             b.putString("helpString",myEditText.getText().toString());
             intent.putExtras(b);
 
+            startActivity(intent);
+        }
+    };
+    private View.OnClickListener layoutButtonListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainActivity.this,Main2Activity.class);
             startActivity(intent);
         }
     };
