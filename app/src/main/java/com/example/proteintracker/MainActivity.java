@@ -27,6 +27,15 @@ public class MainActivity extends AppCompatActivity {
         Button helpBtn = (Button)findViewById(R.id.helpButton);
         helpBtn.setOnClickListener(helpButtonListener);
 
+        Button relativeBtn = (Button)findViewById(R.id.relativeBtn);
+        relativeBtn.setOnClickListener(relativeBtnListener);
+
+        Button tableBtn = (Button) findViewById(R.id.tableBtn);
+        tableBtn.setOnClickListener(tableBtnListener);
+
+        Button AppBtn = (Button) findViewById(R.id.mainBtn);
+        AppBtn.setOnClickListener(mainBtnListener);
+
         Button myBtn = (Button) findViewById(R.id.button1);
         myBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +73,27 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+            startActivity(intent);
+        }
+    };
+    private View.OnClickListener relativeBtnListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainActivity.this,Main3Activity.class);
+            startActivity(intent);
+        }
+    };
+    private View.OnClickListener tableBtnListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainActivity.this,Main4Activity.class);
+            startActivity(intent);
+        }
+    };
+    private View.OnClickListener mainBtnListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainActivity.this,Main5Activity.class);
             startActivity(intent);
         }
     };
