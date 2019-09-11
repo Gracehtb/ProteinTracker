@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         Button AppBtn = (Button) findViewById(R.id.mainBtn);
         AppBtn.setOnClickListener(mainBtnListener);
 
+        Button FragmentBtn = (Button) findViewById(R.id.fragmentBtn);
+        FragmentBtn.setOnClickListener(fragmentBtnListener);
+
         Button myBtn = (Button) findViewById(R.id.button1);
         myBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +97,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(MainActivity.this,Main5Activity.class);
+            startActivity(intent);
+        }
+    };
+    private View.OnClickListener fragmentBtnListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainActivity.this,Main6FragmentActivity.class);
             startActivity(intent);
         }
     };
