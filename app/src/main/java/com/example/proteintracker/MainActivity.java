@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         Button FragmentBtn = (Button) findViewById(R.id.fragmentBtn);
         FragmentBtn.setOnClickListener(fragmentBtnListener);
 
+        Button FragmentMhsBtn = (Button) findViewById(R.id.mahasiswaBtn);
+        FragmentMhsBtn.setOnClickListener(fragmenMhstBtnListener);
+
         Button myBtn = (Button) findViewById(R.id.button1);
         myBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,6 +107,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(MainActivity.this,Main6FragmentActivity.class);
+            startActivity(intent);
+        }
+    };
+    private View.OnClickListener fragmenMhstBtnListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainActivity.this,MahasiswaActivity.class);
             startActivity(intent);
         }
     };
