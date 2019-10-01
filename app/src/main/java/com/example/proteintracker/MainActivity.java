@@ -48,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
         Button kelolaDataBtn = (Button) findViewById(R.id.kelolaBtn);
         kelolaDataBtn.setOnClickListener(kelolaMhsBtnListener);
 
+        Button ReceycleBtn = (Button) findViewById(R.id.dataMhs);
+        ReceycleBtn.setOnClickListener(recycleActivityListener);
+
+
         Button myBtn = (Button) findViewById(R.id.button1);
         myBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -136,6 +140,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(MainActivity.this,ListActivity.class);
+            startActivity(intent);
+        }
+    };
+    private View.OnClickListener recycleActivityListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainActivity.this,DataMahasiswaActivity.class);
             startActivity(intent);
         }
     };
