@@ -1,7 +1,9 @@
 package com.example.proteintracker;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
         layoutBtn.setOnClickListener(layoutButtonListener);
 
 
-        Button helpBtn = (Button)findViewById(R.id.helpButton);
+        Button helpBtn = (Button) findViewById(R.id.helpButton);
         helpBtn.setOnClickListener(helpButtonListener);
 
-        Button relativeBtn = (Button)findViewById(R.id.relativeBtn);
+        Button relativeBtn = (Button) findViewById(R.id.relativeBtn);
         relativeBtn.setOnClickListener(relativeBtnListener);
 
         Button tableBtn = (Button) findViewById(R.id.tableBtn);
@@ -52,16 +55,21 @@ public class MainActivity extends AppCompatActivity {
         ReceycleBtn.setOnClickListener(recycleActivityListener);
 
 
+
+
         Button myBtn = (Button) findViewById(R.id.button1);
         myBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 EditText myEditText = (EditText) findViewById(R.id.editText1);
-                Log.d("Proteintracker",myEditText.getText().toString());
+                Log.d("Proteintracker", myEditText.getText().toString());
             }
 
         });
     }
+
+
+
     /*private View.OnClickListener helpButtonListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -150,4 +158,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     };
+
+
 }
+
